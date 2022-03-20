@@ -12,3 +12,15 @@ class Solution:
         if ans > 2**31 - 1: return 0
         if flag: ans *= -1
         return ans
+
+    # Simpler Approach
+    class Solution:
+    def reverse(self, x: int) -> int:
+        if x < 0: return -1*self.reverse(-x)
+        ans = 0
+        while x:
+            d = x % 10
+            x = x // 10
+            ans = ans*10 + d
+            if ans > 2 ** 31 - 1: return 0
+        return ans
