@@ -16,3 +16,8 @@ class Solution:
             if len(longestPalin) > len(ans):
                 ans = longestPalin
         return ans
+
+if __name__ == "__main__":
+    ob = Solution()
+    inp = input("s = ")
+    print(ob.longestPalindrome(inp))
